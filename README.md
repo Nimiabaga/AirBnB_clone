@@ -1,30 +1,24 @@
 # AirBnB Clone Project
 
 ## Description
-
-This project is a simplified clone of the Airbnb web application, focusing on the implementation of a command-line interface (CLI) to manage AirBnB objects.
+This project is the first step towards building an AirBnB clone web application. The command interpreter developed in this project will manage AirBnB objects, allowing users to perform various operations such as creating, retrieving, updating, and deleting objects.
 
 ## Command Interpreter
+The command interpreter is a tool that allows users to interact with the AirBnB objects via a command-line interface. Below are instructions on how to start and use the command interpreter:
 
-The command interpreter allows users to interact with the AirBnB objects through a shell. It supports various commands to create, retrieve, update, and delete objects, as well as perform operations on them.
+### How to Start
+To start the command interpreter, run the console.py script.
 
-### How to Start the Command Interpreter
 
-To start the command interpreter, run the following command in your terminal:
+### How to Use
+Once the command interpreter is running, you can enter commands to perform operations on AirBnB objects. Here are some examples of supported commands:
 
-```bash
-$ ./console.py
-How to Use the Command Interpreter
-Once the command interpreter is running, you can enter commands interactively. Here are some example commands:
-(hbnb) create User
-(hbnb) all
-(hbnb) update User 1234-5678-9012 email "new.email@example.com"
-(hbnb) quit
-Here are some examples of using the command interpreter:
-$ ./console.py
-(hbnb) create State name="California"
-(hbnb) show State
-(hbnb) update State 1234-5678-9012 name "New York"
-(hbnb) all
-(hbnb) quit
+- `create <classname>`: Create a new instance of the specified class.
+- `show <classname> <id>`: Show details of a specific instance.
+- `update <classname> <id> <attribute> <value>`: Update the attributes of a specific instance.
+- `destroy <classname> <id>`: Delete a specific instance.
+- `all <classname>`: Show details of all instances of a specific class.
+- `quit`: Exit the command interpreter.
+
+For detailed usage instructions and examples, refer to the help command within the command interpreter.
 
