@@ -7,33 +7,27 @@ from datetime import datetime
 
 class BaseModel:
     """Common attributes/methods for other classes."""
-    DATE_FORMAT = "%Y-%m-%dT%H:%M:%S.%f"
 
-    def __init__(self, **kwargs):
+    def __init__(self, *args, **kwargs):
         """Initialize a new BaseModel instance.
 
         Args:
+            *args (any): Unused.
             **kwargs (dict): Key/value pairs representing attributes.
         """
-        self.id = self.generate_id()
+        DATE_FORMAT = "%Y-%m-%dT%H:%M:%S.%f"
+        self.id = str(uuid.uuid4())
         self.created_at = datetime.today()
         self.updated_at = datetime.today()
 
         if kwargs:
             for key, value in kwargs.items():
-                setattr(self, key, value)
+                if key in ['created_at', 'updated_at']:
+                    self.__dict__[key] = datetime.strptime(value, DATE_FORMAT)
+                else:
+                    self.__dict__[key] = value
         else:
             models.storage.new(self)
-
-    def __setattr__(self, name, value):
-        """Override setattr to ensure proper types for attributes."""
-        if name in ['created_at', 'updated_at']:
-            value = datetime.strptime(value, self.DATE_FORMAT)
-        super().__setattr__(name, value)
-
-    def generate_id(self):
-        """Generate a unique ID."""
-        return str(uuid.uuid4())
 
     def __str__(self):
         """Returns a human-readable string representation of the BaseModel instance."""
