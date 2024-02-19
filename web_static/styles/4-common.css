@@ -1,0 +1,17 @@
+/* Body styling */
+body {
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
+    font-family: 'Circular', 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Font family */
+    font-size: 14px; /* Font size */
+    color: #484848; /* Text color */
+}
+
+/* Container styling */
+.container {
+    max-width: 1000px; /* Max container width */
+    margin-top: 30px; /* Top margin */
+    margin-bottom: 30px; /* Bottom margin */
+    margin-left: auto; /* Center horizontally */
+    margin-right: auto; /* Center horizontally */
+}

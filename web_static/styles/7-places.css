@@ -1,0 +1,24 @@
+/* Places Section Styling */
+.places {
+    margin-top: 30px; /* Add space between Places section and previous content */
+}
+
+/* Title Styling for Places */
+.places h1 {
+    font-size: 30px; /* Set the font size for the Places title */
+}
+
+/* Individual Places Listings Styling */
+.places article {
+    width: 390px; /* Set width of each listing */
+    padding: 20px; /* Add padding inside each listing */
+    margin: 20px; /* Add margin around each listing */
+    border: 1px solid #FF5A5F; /* Border color for each listing */
+    border-radius: 4px; /* Add rounded corners to each listing */
+}
+
+/* Place Name Styling */
+.places article h2 {
+    font-size: 30px; /* Set the font size for the Place name */
+    text-align: center; /* Center-align the Place name */
+}

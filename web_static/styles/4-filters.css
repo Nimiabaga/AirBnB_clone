@@ -1,0 +1,31 @@
+/* Filters styling */
+.filters {
+    background-color: #FFFFFF; /* White background */
+    height: 70px;
+    width: 100%;
+    border: 1px solid #DDDDDD; /* Gray border */
+    border-radius: 4px; /* Rounded corners */
+    display: flex; /* Flex container */
+    align-items: center; /* Center items vertically */
+    justify-content: right; /* Align items to the right */
+}
+
+/* Button styling */
+button {
+    font-size: 18px;
+    background-color: #FF5A5F; /* Red background */
+    color: #FFFFFF; /* White text */
+    height: 48px;
+    width: 20%;
+    border-radius: 4px; /* Rounded corners */
+    margin-right: 30px; /* Right margin */
+    text-align: center; /* Center text horizontally */
+    opacity: 1.0; /* Full opacity */
+    filter: alpha(opacity=100); /* IE8 compatibility */
+}
+
+/* Button hover effect */
+button:hover {
+    opacity: 0.9; /* Reduced opacity on hover */
+    filter: alpha(opacity=100); /* IE8 compatibility */
+}
